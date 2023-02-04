@@ -3,19 +3,24 @@
 {% block content %}
 
   <div>
-    <h2>Location:  {{ object.location }}</h2>
-    <p>Owner: {{ object.owner }}</p>
-    <p>Description: {{ object.description }}</p>
-    <p>Hourly Sales: {{ object.hourly_sales }}</p>
-    <p>Min Customers/Hour: {{ object.minimum_customers_per_hour }}</p>
-    <p>Max Customers/Hour: {{ object.maximum_customer_per_hour }}</p>
-    <p>Average Cookies/Sale: {{ object.average_cookies_per_sale }}</p>
+    <a href="#"
+       class="block max-w-sm p-6 bg-white border text-white border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+      <h2>Location: {{ object.location }}</h2>
+      <p>Owner: {{ object.owner }}</p>
+      <p>Description: {{ object.description }}</p>
+      <p>Hourly Sales: {{ object.hourly_sales }}</p>
+      <p>Min Customers/Hour: {{ object.minimum_customers_per_hour }}</p>
+      <p>Max Customers/Hour: {{ object.maximum_customer_per_hour }}</p>
+      <p>Average Cookies/Sale: {{ object.average_cookies_per_sale }}</p>
+    </a>
   </div>
 
   <br>
   <div>
-    <p><a href="{% url 'cookie_stand_update' object.pk %}">Update</a></p>
-    <p><a href="{% url 'cookie_stand_delete' object.pk %}">Delete</a></p>
+    <p class="m-2"><a href="{% url 'cookie_stand_update' object.pk %}"
+                      class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">Update</a></p>
+    <p class="m-2"><a href="{% url 'cookie_stand_delete' object.pk %}"
+                      class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Delete</a></p>
   </div>
 
 
