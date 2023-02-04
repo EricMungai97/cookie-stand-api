@@ -16,7 +16,18 @@ This app includes a frontend site that displays data about cookie stands. It als
 
 * Requires a .env
 
-## How to initalize
+## How to initialize
 
-`docker compose up`
+* Clone and cd into directory.
+
+* Create venv by running `python3.11 -m venv .venv`
+
+* Activate venv `source.venv/bin/activate`
+
+* Install requirements by running `pip install -r requirements.txt`
+
+* Then run `gunicorn project.wsgi:application --bind 0.0.0.0:8000 --workers 4` or `python manage.py runserver`
+
+* To run inside container run `docker compose up`
+
 
