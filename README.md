@@ -10,6 +10,8 @@ This app includes a frontend site that displays data about cookie stands. It als
 
 ## Links and Resources
 
+[Deployed Server](https://cookie-stand-api-nine.vercel.app/)
+
 [ElephantSQL](https://www.elephantsql.com/)
 
 ## Setup
